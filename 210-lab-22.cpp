@@ -267,7 +267,7 @@ int main() {
 
     cout << endl;
     cout << "Deleting last position 4:" << endl;
-    list.delete_pos(4);
+    list.delete_pos(5);
     list.print();
     list.print_reverse();
 
