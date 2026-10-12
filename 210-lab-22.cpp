@@ -75,8 +75,10 @@ public:
             tail = newNode; // Inserting at the end
         temp->next = newNode;
     }
-
-    void delete_node(int value) {
+    
+    //renaming delete node
+    void delete_val(int value) {
+    //void delete_node(int value) {
         if (!head) return; // Empty list
 
         Node* temp = head;
@@ -95,6 +97,25 @@ public:
             temp->next->prev = temp->prev;
         } else {
             tail = temp->prev; // Deleting the tail
+        }
+
+        delete temp;
+    }
+
+    //adding pop_front
+    void pop_front() {
+        if (!head)
+            return;
+
+        Node* temp = head;
+
+        if (head == tail) {
+            head = nullptr;
+            tail = nullptr;
+        }
+        else {
+            head = head->next;
+            head->prev = nullptr;
         }
 
         delete temp;
