@@ -296,7 +296,7 @@ int main() {
     list.print_reverse();
 
     cout << endl;
-    cout << "Pop front again to empty the list:" << endl;
+    cout << "Pop front again:" << endl;    
     list.pop_front();
     list.print();
     list.print_reverse();
