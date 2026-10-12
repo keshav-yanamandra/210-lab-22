@@ -82,7 +82,6 @@ public:
     
     //renaming delete node
     void delete_val(int value) {
-    //void delete_node(int value) {
         if (!head) return; // Empty list
 
         Node* temp = head;
@@ -139,6 +138,52 @@ public:
         else {
             tail = tail->prev;
             tail->next = nullptr;
+        }
+
+        delete temp;
+    }
+
+    void delete_pos(int position) {
+        if (!head) {
+            cout << "List is empty." << endl;
+            return;
+        }
+
+        if (position < 0) {
+            cout << "Position must be >= 0." << endl;
+            return;
+        }
+
+        Node* temp = head;
+
+        for (int i = 0; i < position; i++) {
+            if (!temp) {
+                cout << "Position exceeds list size." << endl;
+                return;
+            }
+
+            temp = temp->next;
+        }
+
+        if (!temp) {
+            cout << "Position exceeds list size." << endl;
+            return;
+        }
+
+        // unlink same idea and code from delete_node() in 210-dll-demo-2.cpp 
+
+        if (temp->prev) {
+            temp->prev->next = temp->next;
+        }
+        else {
+            head = temp->next;
+        }
+
+        if (temp->next) {
+            temp->next->prev = temp->prev;
+        }
+        else {
+            tail = temp->prev;
         }
 
         delete temp;
