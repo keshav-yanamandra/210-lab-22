@@ -233,8 +233,39 @@ int main() {
 
     cout << "list forward: ";
     list.print();
+    cout << endl;
 
     cout << "list backward: ";
+    list.print_reverse();
+    cout << endl;
+
+    cout << "Deleting middle value 3:" << endl;
+    list.delete_val(3);
+    list.print();
+    list.print_reverse();
+
+    cout << endl;
+    cout << "Deleting head value 1:" << endl;
+    list.delete_val(1);
+    list.print();
+    list.print_reverse();
+
+    cout << endl;
+    cout << "Deleting position 0:" << endl;
+    list.delete_pos(0);
+    list.print();
+    list.print_reverse();
+
+    cout << endl;
+    cout << "Deleting last position 4:" << endl;
+    list.delete_pos(4);
+    list.print();
+    list.print_reverse();
+
+    cout << endl;
+    cout << "Deleting middle position 1:" << endl;
+    list.delete_pos(1);
+    list.print();
     list.print_reverse();
 
 
