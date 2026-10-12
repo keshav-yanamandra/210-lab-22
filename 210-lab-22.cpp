@@ -1,3 +1,7 @@
+// Keshav Yanamandra
+// COMSC-210-5293, Fall 2026
+// Lab 22
+
 #include <iostream>
 using namespace std;
 
@@ -116,6 +120,25 @@ public:
         else {
             head = head->next;
             head->prev = nullptr;
+        }
+
+        delete temp;
+    }
+
+    void pop_back() {
+        if (!tail) {
+            return;
+        }
+
+        Node* temp = tail;
+
+        if (head == tail) {
+            head = nullptr;
+            tail = nullptr;
+        }
+        else {
+            tail = tail->prev;
+            tail->next = nullptr;
         }
 
         delete temp;
