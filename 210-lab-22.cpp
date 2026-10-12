@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 
-const int MIN_NR = 10, MAX_NR = 99, MIN_LS = 5, MAX_LS = 20;
+//const int MIN_NR = 10, MAX_NR = 99, MIN_LS = 5, MAX_LS = 20;
 
 class DoublyLinkedList {
 private:
@@ -230,6 +230,8 @@ int main() {
     list.push_back(6);
     list.push_back(7);
     list.push_back(8);
+    list.push_back(9);
+
 
     cout << "list forward: ";
     list.print();
@@ -251,6 +253,13 @@ int main() {
     list.print_reverse();
 
     cout << endl;
+    cout << "Trying to delete value 999:" << endl;
+    list.delete_val(999);
+    list.print();
+    list.print_reverse();
+
+
+    cout << endl;
     cout << "Deleting position 0:" << endl;
     list.delete_pos(0);
     list.print();
@@ -265,6 +274,12 @@ int main() {
     cout << endl;
     cout << "Deleting middle position 1:" << endl;
     list.delete_pos(1);
+    list.print();
+    list.print_reverse();
+
+    cout << endl;
+    cout << "Trying to delete position 99:" << endl;
+    list.delete_pos(99);
     list.print();
     list.print_reverse();
 
@@ -297,8 +312,11 @@ int main() {
     cout << "Final forward: ";
     list.print();
 
+    cout << endl;
     cout << "Final backward: ";
     list.print_reverse();
+    cout << endl;
+
 
 
     return 0;
