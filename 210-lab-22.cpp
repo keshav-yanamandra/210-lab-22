@@ -268,6 +268,38 @@ int main() {
     list.print();
     list.print_reverse();
 
+    cout << endl;
+    cout << "Pop front:" << endl;
+    list.pop_front();
+    list.print();
+    list.print_reverse();
+
+    cout << endl;
+    cout << "Pop back:" << endl;
+    list.pop_back();
+    list.print();
+    list.print_reverse();
+
+    cout << endl;
+    cout << "Pop front again to empty the list:" << endl;
+    list.pop_front();
+    list.print();
+    list.print_reverse();
+
+    cout << endl;
+    cout << "Pop front on empty list:" << endl;
+    list.pop_front();
+
+    cout << "Pop back on empty list:" << endl;
+    list.pop_back();
+
+    cout << endl;
+    cout << "Final forward: ";
+    list.print();
+
+    cout << "Final backward: ";
+    list.print_reverse();
+
 
     return 0;
 }
